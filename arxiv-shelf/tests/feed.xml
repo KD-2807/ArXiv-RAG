@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:arxiv="http://arxiv.org/schemas/atom">
+<opensearch:totalResults>2</opensearch:totalResults>
+<entry><id>http://arxiv.org/abs/2611.00001v2</id><title>Sound &amp; Robotics</title><published>2026-11-01T00:00:00Z</published><category term="cs.SD"/><category term="cs.RO"/><arxiv:primary_category term="cs.SD"/></entry>
+<entry><id>http://arxiv.org/abs/hep-th/9901001v1</id><title>Old paper</title><published>1999-01-01T00:00:00Z</published><category term="hep-th"/></entry>
+</feed>

@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.sqlite3-*
+*.lock.tmp
+.ruff_cache/
+*.sqlite3.ann/
+benchmarks/*-locked.json
+*-report.json
+.mypy_cache/

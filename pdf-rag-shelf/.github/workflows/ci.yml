@@ -1,0 +1,29 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  python:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update && sudo apt-get install -y poppler-utils util-linux tk xvfb python3-tk tesseract-ocr tesseract-ocr-eng bubblewrap
+      - run: python -m pip install -r python/requirements-ann.txt
+      - run: python -m pip install -r python/requirements-dev.txt
+      - run: ruff check --select E9,F63,F7,F82 python tests scripts
+      - run: PYTHONPATH=python python -W error::ResourceWarning -m unittest discover -s tests -p 'test_*.py' -v
+      - run: PYTHONPATH=python python -m mypy
+      - run: PYTHONPATH=python python -m mypy --strict python/rag_shelf/domain.py python/rag_shelf/ranking.py python/rag_shelf/filesystem.py python/rag_shelf/lifecycle.py
+      - run: xvfb-run -a python tests/ui_smoke.py
+  dependency-audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pip-audit==2.10.1
+      - run: pip-audit -r python/requirements-ann.txt

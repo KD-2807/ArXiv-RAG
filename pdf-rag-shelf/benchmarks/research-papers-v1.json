@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "name": "Research Papers Starter v1",
+  "judgments": "Small manually authored document-level starter judgments based on paper topics. Not an independently adjudicated relevance dataset. Subject subsets with one document are filter checks, not evidence of ranking quality.",
+  "documents": [
+    {
+      "id": "attention",
+      "path": "NLP/1706.03762.pdf",
+      "title": "Attention Is All You Need",
+      "source": "https://arxiv.org/abs/1706.03762"
+    },
+    {
+      "id": "lora",
+      "path": "NLP/2106.09685.pdf",
+      "title": "LoRA: Low-Rank Adaptation of Large Language Models",
+      "source": "https://arxiv.org/abs/2106.09685"
+    },
+    {
+      "id": "clip",
+      "path": "Vision/2103.00020.pdf",
+      "title": "Learning Transferable Visual Models From Natural Language Supervision",
+      "source": "https://arxiv.org/abs/2103.00020"
+    },
+    {
+      "id": "whisper",
+      "path": "Sound/2212.04356.pdf",
+      "title": "Robust Speech Recognition via Large-Scale Weak Supervision",
+      "source": "https://arxiv.org/abs/2212.04356"
+    }
+  ],
+  "queries": [
+    {
+      "id": "attention-1",
+      "query": "Which architecture replaces recurrence and convolution with attention for sequence transduction?",
+      "subject": "",
+      "relevance": {
+        "attention": 3
+      }
+    },
+    {
+      "id": "attention-2",
+      "query": "How are queries, keys and values combined in scaled dot-product attention?",
+      "subject": "",
+      "relevance": {
+        "attention": 3
+      }
+    },
+    {
+      "id": "attention-3",
+      "query": "Why does the Transformer use positional encodings?",
+      "subject": "",
+      "relevance": {
+        "attention": 3
+      }
+    },
+    {
+      "id": "attention-subject",
+      "query": "Which architecture replaces recurrence and convolution with attention for sequence transduction?",
+      "subject": "NLP",
+      "relevance": {
+        "attention": 3
+      }
+    },
+    {
+      "id": "lora-1",
+      "query": "How can frozen pretrained weights be adapted using trainable low-rank matrices?",
+      "subject": "",
+      "relevance": {
+        "lora": 3
+      }
+    },
+    {
+      "id": "lora-2",
+      "query": "Which adaptation method reduces trainable parameters without adding inference latency?",
+      "subject": "",
+      "relevance": {
+        "lora": 3
+      }
+    },
+    {
+      "id": "lora-3",
+      "query": "How does low-rank adaptation differ from updating every pretrained model weight?",
+      "subject": "",
+      "relevance": {
+        "lora": 3
+      }
+    },
+    {
+      "id": "lora-subject",
+      "query": "How can frozen pretrained weights be adapted using trainable low-rank matrices?",
+      "subject": "NLP",
+      "relevance": {
+        "lora": 3
+      }
+    },
+    {
+      "id": "clip-1",
+      "query": "How can image representations be trained from natural language supervision?",
+      "subject": "",
+      "relevance": {
+        "clip": 3
+      }
+    },
+    {
+      "id": "clip-2",
+      "query": "Which method learns image and text encoders with a contrastive objective?",
+      "subject": "",
+      "relevance": {
+        "clip": 3
+      }
+    },
+    {
+      "id": "clip-3",
+      "query": "How are text descriptions used for zero-shot image classification?",
+      "subject": "",
+      "relevance": {
+        "clip": 3
+      }
+    },
+    {
+      "id": "clip-subject",
+      "query": "How can image representations be trained from natural language supervision?",
+      "subject": "Vision",
+      "relevance": {
+        "clip": 3
+      }
+    },
+    {
+      "id": "whisper-1",
+      "query": "Which speech model is trained on 680000 hours of multilingual and multitask supervised data?",
+      "subject": "",
+      "relevance": {
+        "whisper": 3
+      }
+    },
+    {
+      "id": "whisper-2",
+      "query": "How does weakly supervised training improve robust speech recognition?",
+      "subject": "",
+      "relevance": {
+        "whisper": 3
+      }
+    },
+    {
+      "id": "whisper-3",
+      "query": "Which encoder-decoder speech system supports both transcription and translation?",
+      "subject": "",
+      "relevance": {
+        "whisper": 3
+      }
+    },
+    {
+      "id": "whisper-subject",
+      "query": "Which speech model is trained on 680000 hours of multilingual and multitask supervised data?",
+      "subject": "Sound",
+      "relevance": {
+        "whisper": 3
+      }
+    }
+  ]
+}

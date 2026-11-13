@@ -1,0 +1,23 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  python:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: PYTHONPATH=python python3 -m unittest discover -s python/tests -v
+      - run: sudo apt-get update && sudo apt-get install -y tk xvfb
+      - run: xvfb-run -a python3 tests/ui_smoke.py
+  rust:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - run: rustup update stable && rustup default stable && rustup component add rustfmt clippy
+      - run: cargo test --locked --manifest-path rust/Cargo.toml
+      - run: cargo fmt --manifest-path rust/Cargo.toml -- --check
+      - run: cargo clippy --locked --manifest-path rust/Cargo.toml -- -D warnings
